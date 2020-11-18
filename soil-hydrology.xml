@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext xml:lang="en-US">
+<!-- <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr-FR"> -->
+
+    <docinfo>
+        <initialism>SH</initialism>
+
+        <macros>
+        \newcommand{\identity}{\mathrm{id}}
+        \newcommand{\notdivide}{{\not{\mid}}}
+        \newcommand{\notsubset}{\not\subset}
+        \newcommand{\lcm}{\operatorname{lcm}}
+        \newcommand{\gf}{\operatorname{GF}}
+        \newcommand{\inn}{\operatorname{Inn}}
+        \newcommand{\aut}{\operatorname{Aut}}
+        \newcommand{\Hom}{\operatorname{Hom}}
+        \newcommand{\cis}{\operatorname{cis}}
+        \newcommand{\chr}{\operatorname{char}}
+        \newcommand{\Null}{\operatorname{Null}}
+        </macros>
+
+        <!-- tikz package and libraries for images -->
+        <latex-image-preamble>
+        \usepackage{tikz}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{snakes}
+        </latex-image-preamble>
+    </docinfo>
+    
+    <book xml:id="soil-hydrology">
+        <title>Soil Hydrology and Biophysics</title>
+
+        <frontmatter xml:id="frontmatter">
+
+            <titlepage>
+                <author>
+                    <personname>John Selker</personname>
+                    <institution>Oregon State University</institution>
+                </author>
+
+                <author>
+                    <personname>Dani Or</personname>
+                    <institution>ETH-Zurich</institution>
+                </author>
+
+                <date><today /></date>
+            </titlepage>
+
+            <colophon xml:id="front-colophon">
+                <edition>Second Edition</edition>
+
+                <website>
+                    <name><c></c></name>
+                    <address>https://open.oregonstate.education/soilhydrologyandbiophysics</address>
+                </website>
+
+                <copyright>
+                    <year>1900<ndash />2020</year>
+                    <holder>John Selker, Dani Or</holder>
+                    <minilicense>Creative Commons BY-NC-SA License</minilicense>
+                </copyright>
+            </colophon>
+
+            <acknowledgement xml:id="acknowledgement">
+                <p>Acknowledgements here.</p>
+            </acknowledgement>
+
+            <preface xml:id="preface">
+                <p>Preface here.</p>
+            </preface>
+
+        </frontmatter>
+
+
+        <chapter>
+            <title>Rogue First Chapter</title>
+
+            <p>Simply so numbers will correct for real Chapter 2.</p>
+        </chapter>
+
+
+<!-- 2.1      Where we are going
+
+2.1.1    Soil as a Three-Phase System
+
+2.1.2    Volume and Mass Relationships
+
+2.1.3    Liquid Content
+
+2.2       Characterization of the Solid Phase
+
+2.2.1    Texture and systems of classification
+
+2.2.2    Sieving
+
+2.2.3    Sedimentation
+
+2.2.4    Surface Area of Soil Particles
+
+2.2.5    Soil Structure and Bulk Density
+
+Aggregation, bio-pores, packing geometries
+
+2.3       Characterization of the Liquid Phase
+
+2.3.1    Soil Water Content Measurement Methods
+
+Gravimetric, dielectric, neutron probe, cosmic ray backscatter, remote sensing via radar and gravitation (SMAP, SMOS, GRACE); direct, indirect, and surrogate methods, errors.
+
+2.3.2    Applications of Soil Water Content Information - The Water Balance across scales of soil profile, field, catchment, continent, and globe and seconds to decades.
+
+2.3.3    Field Capacity, Wilting Point and Plant-Available Soil Water
+
+2.4       The Energy State of Soil Water
+
+2.4.1    Total Soil Water Potential
+
+2.4.2    Gravitational Potential
+
+2.4.3    Matric Potential
+
+2.4.3.1 Water Properties Affecting the Matric Potential
+
+2.4.4    Pressure Potential
+
+2.4.5    Solute Potential
+
+2.4.6    Water Potentials Under Equilibrium Conditions (Hanks, 1992 - pp. 31-37)
+
+2.4.6.1.1          Constructing Potential Diagrams under Equilibrium Conditions
+
+2.4.6.1.2          Water Potentials Under Nonequilibrium Conditions
+
+2.5       Bringing gas, solids and liquids together -->
+
+
+
+
+
+
+        <chapter>
+            <title>Basic Relationships and the Soil Phases Under Equilibrium Conditions</title>
+
+            <section>
+                <title>Where we are going</title>
+
+                <introduction>
+                    <video youtube="uY0Bp5WVFxw"/>
+                    <p>
+                        We are concerned with describing the retention and movement of fluids in natural porous media. This objective fits neatly into a single sentence, however the challenge of attaining this goal remains to be met to the degree required to solve many contemporary problems in environmental sciences and engineering. Nonetheless, there are many powerful tools at our disposal. In this chapter we will cover the basic physical properties upon which much of the remainder of the text rests. If all goes well you will get a “feel” for both the physical processes which control flow through porous media and the conceptual and mathematical approaches we employ to characterize the processes. Having a well balanced understanding from both perspectives is essential; you must be able to guide your application of mathematical solutions based on a clear and accurate intuitive concept of what you are trying to describe.How do you describe a chunk of moist porous medium? What are some basic features which would allow you to abstract that chunk of material in terms of a set of mathematical parameters which will assist in describing: the way in which it might dry; how rain falling on it would soak in (and how much would run off); and what would happen to it if you spilled some gasoline on it? We require a system of <strong>measurable quantities</strong> for a porous medium that may be used in addressing the broadest possible set of questions about how fluids will interact with it under a variety of conditions. Porous media is characterized by a set of parameters selected to provide as concisely as possible the greatest insight into the response of the media to a range of physical processes. In this section we identify the fundamental parameters employed in describing both the media and the fluid of interest, and introduce the fundamental equations of motion for fluids in porous media.
+                    </p>
+                </introduction>
+
+
+                <subsection> <!-- 2.1.1 -->
+                    <title>Soil as a Three-Phase System</title>
+                    <idx>three-phase system</idx>
+
+                    <p>Before digging into the details of hydraulic properties and flow processes, we need to provide some background, definitions and quantitative measures. We divide natural porous media into three constituent phases: solid, liquid, and gaseous, with each of these phases consisting of an admixture of compounds.</p>
+
+                    <p>
+                        <idx>gaseous phase</idx>
+                        <idx><h>phase</h><h>gaseous</h></idx>
+                        The gaseous phase is generally dominated by the major constituents of the atmosphere; N<sub>2</sub>, O<sub>2</sub>, CO<sub>2</sub>, H<sub>2</sub>O vapor etc. Clearly, as microbes and plant roots respire, a soil’s CO<sub>2</sub> and CH<sub>4</sub> content may become significantly elevated, while in industrially contaminated sites there may be significant levels of organic vapors. By and large we keep track of the state of the gaseous phase in the soil just as we do in the atmosphere; we consider the partial pressures of each of the constituents, and keep track of the partitioning of each compound. Primary parameters of interest, then, include the gas diffusivity, and the partial pressure versus temperature relationship, and the Henry’s law coefficient (Henry’s law states that at a given temperature, for low concentrations, there is a linear relationship between the partial pressure of the gas and the concentration of the material in the liquid phase). It is noteworthy that transport of gaseous phases are dominated by molecular diffusion which generates about 2 cm/day of spreading, while molecular diffusion in the liquid phase is 100 times less effective in contaminant mass movement.
+                            <fn>
+                                Gardner left things here, but it is interesting to push the calculation one step further. When in Somalia I went to a place a few hundred miles from the hottest inhabited place on earth. I was surprised to learn that the water table was only about 3.5 m below the surface, despite the fact that the most recent major recharge event occurred thousands of years ago. Can we estimate the time it takes a water table to drop from the surface in time using Gardner’s result? Well, officially Gardner’s result is for a steady-state system, but let’s just assume that the system changes slowly enough that this assumption is satisfied. What will the maximum rate of water table decline? If the average loss of water in the profile is θ<sub>e</sub>, then the rate of water table decline will be q<sub>max</sub>/θ<sub>e</sub>. We then may write
+
+                                <men>\mathrm{\frac{dz} {dt} = \frac{q_{max}} {\theta_{e}} = \frac{K_{s}} {\theta_{e} [\exp(\alpha z) - 1]}}</men>
+
+                                Solving for dt and integrating, we find the time for the water table to reach a depth z is approximately
+
+                                <men>\mathrm{t = \frac{\theta_{e}} {K_{s}} \left[\frac{\exp (\alpha z) - 1} {\alpha} - z\right]}</men>
+
+                                For typical values of these parameters for a silty soil (say α=5/m, K<sub>s</sub>=1m/d and θ<sub>e</sub>=0.2) the time to reach a depth of 3.5 m is predicted to be 4,400 years, which matches my observations pretty well. It is interesting to note that to drop another 0.5 m would take 50,000 years! It is further instructive to think about how a desert society which relies on a shallow depth to groundwater is effected by the introduction of mechanical pumps which can drop the water table by up to a meter per year.
+                            </fn>
+                        The movement of gaseous phase constituents is also a function of the changes in atmospheric pressure, which generates a pumping effect, as noted by Buckingham (1904) and Weeks (1979). Of course, gaseous phase movement can also be driven by liquid phase movement, as is the case of a saturated wetting front pushing gas down through a profile during flood irrigation. Gas phase transport has received renewed interest with the advent of soil vapor extraction (SVE) as a remediation technique for volatile organics. In this procedure, gas is pumped out of the vadose zone through a well, taking the volatile fraction of contamination with it.
+                    </p>
+
+                    <p>
+                        <idx>liquid phase</idx>
+                        <idx><h>phase</h><h>liquid</h></idx>
+
+                        Of the possible liquid phase constituents, water is by far of greatest interest. In the vadose zone it is valid to assume liquids are incompressible, since by definition liquids will only experience pressures which are negative, and generally with a magnitude of less than 10 atmospheres. In contrast, below the water table, groundwater commonly experiences extreme pressures (e.g. in cases of confined and very deep aquifers). Otherwise liquid phase properties are most often parameterized in terms of the interaction with solid and gaseous phases, such as contact angle, capillary pressure, volatility, etc., as is discussed later.</p>
+
+                    <example>
+                        <p>What is the percent volumetric change in water in the vadose zone with a change in pressure from zero to –10 bars (10 bars is 10<sup>6 </sup>N/m<sup>2</sup>)? Recall that the isothermal compressibility of water, b<sub>w</sub>, is about 4.8 x 10<sup>-10</sup> m<sup>2</sup>/N. The percentage change in volume of water is 100 x b<sub>w</sub> x the change in pressure = 0.048%. Since the material is mostly gas filled when the pressure is this low, this very small change in volume will be undetectable.</p>
+
+                        <p>The solid phase may be as complicated or simple as you like. Typically composed of largely inert minerals (rock, gravel, sand, silt and clay), solid constituents may include roots, carbon, and other highly reactive substances. Note that in this discussion we have slighted the semi-solid or soft tissue “goo” such as microbes, plants and worms that are prevalent in the vadose zone. These components are very important to understanding the chemical behavior of the unsaturated zone, and are discussed in chapter 4.</p>
+
+                        <p>To get yourself in the proper frame of mind, pretend you are an ant. What humans consider to be uniform porous medium now looks lumpy and irregular. Although this may seem all too obvious, it is crucial to consider this problem in detail. To do this we will have to introduce the basic parameters used to conceptualize a porous media. First, let’s identify the constituents which we will concern ourselves with: the mass and volume of each phase; gas, liquid and solid. As identified in Figure 2.1a, the volume and mass of phase i are identified as V<sub>i</sub> and M<sub>i</sub> respectively.</p>
+
+                        <figure>
+                            <caption>Figure 2.1a. Diagram of constituents of a sample of unsaturated porous media on volumetric and mass basis. Notice that the air and water phases are interchangeable on short time scales (down to seconds), while the other constituents are largely static over timescales of months and years.</caption>
+                            <image source="images/0107_v6.png" width="80%"/>
+                        </figure>
+                    </example>
+                </subsection> <!-- 2.1.1 -->
+
+
+                <subsection> <!-- 2.1.2 -->
+                    <title>Volume and Mass Relationships</title>
+                
+
+                    <p>We can now define the dry bulk density of the medium, which is the dry mass per unit volume of the medium, is denoted ρ<sub>vb</sub>.
+                    <md>
+                        <mrow>\rho_{vb} &amp;= \frac{\text{mass in volume V}} {\text{volume V}}</mrow>
+                        <mrow number="yes">&amp;= \mathrm{\frac{M_{vs}} {V_{t}}}</mrow>
+                    </md>
+                    Here the subscripts “V<sub>t</sub>” denotes the total volume over which this density is calculated, “b” denotes bulk and “s” denotes the solid phase (without fluid). Typical units for density are grams per cubic centimeter, kilograms per cubic meter, or, heaven forbid, pounds per cubic foot. The upper limit on ρ<sub>vb</sub> is the density of the pure solid mineral, often called the particle density, which we denote ρ<sub>s</sub>.
+                    <md>
+                        <mrow>\mathrm{\rho_{s}} &amp;= \frac{\text{mass of pure mineral}} {\text{volume of pure mineral}}</mrow>
+                        <mrow number="yes">&amp;= \mathrm{\frac{M_{s}} {V_{s}}}</mrow>
+                    </md>
+                    Notice that the value of ρ<sub>s</sub> is independent of the value of V<sub>s</sub> (since the value of density is taken to be a material property independent of the volume selected), whereas as we shall soon see, ρ<sub>vb</sub> is not quite as cooperative. The solid phase density is often denoted by the specific gravity of the material, denoted by s, which is simply the ratio of the solid density to that of water ρ<sub>w</sub>:
+                    <men xml:id="single-equation">\mathrm{s=\rho_{s}/\rho_{w}}</men>
+                    Typical values of s are 2.65 for quartz (often used as the default value in lieu of further information), 2.54 for feldspar, 2.72 for calcite and 5.0 for pyrite.</p>
+
+                    <p>Complementing these definitions, is that of porosity, or void fraction, which we denote by n<sub>v</sub>.
+                    <mdn>
+                        <mrow>\mathrm{n_{v}} &amp;= \frac{\text{sample volume} - \text{volume of pure material}} {\text{sample volume}}</mrow>
+                        <mrow>               &amp;= \mathrm{\frac{V_{t} - V_{s}}{V_{t}}}</mrow>
+                        <mrow>               &amp;= \frac{\text{void volume}} {\text{sample volume}}</mrow>
+                        <mrow>               &amp;= \mathrm{1 - \frac{V_{s}} {V_{t}}}</mrow>
+                        <mrow xml:id="was-tagged-e">               &amp;= \mathrm{1 - \frac{\rho_{vb}} {\rho_{s}}}</mrow>
+                    </mdn>
+                    n<sub>v</sub> indicates the fraction of the volume V which is not filled by solids. The bulk density of a medium, ρ<sub>vb</sub>, depends primarily on two characteristics of the medium: its particle size distribution and the medium’s structure. Figure 2.1 illustrates that the size of particles alone does not dictate density: A set of media which are made up of single sizes of particles (and which are packed in the same arrangement) will have identical densities. Hence, the particle size distribution, and to a lesser degree the packing, strongly affect ρ<sub>vb</sub>. The material structure of the medium is also significant in determining ρ<sub>vb</sub>, particularly in the case of clays and very sharply angular aggregates.</p>
+
+                    <p>So far so good; but what about this annoying V subscript? Can’t we just forget about the sample volume? Not really, and it is worthwhile seeing why. Let’s just run a quick “experiment” to make this clear. Imagine that you are in the middle of a large field with a tool which measures ρ<sub>vb</sub> for <em>any</em> prescribed V. Start with the instrument set with V smaller than any individual grain in the soil (Figure 2.2). You will be sampling the density of either pure solid, pure void, or maybe some arbitrary mixture of the two. Now, holding the instrument steady, enlarge V continuously, all the while recording the values of ρ<sub>vb</sub>. Figure 2.2 shows two possible realizations of such an experiment.</p>
+
+                    <figure>
+                        <caption>Dependence of bulk density on particle size distribution : (a) uniform particle size distribution gives uniform density for a given geometry of particle; (b) increasing the range of particle sizes gives rise to greater bulk density.  Note that "well sorted" means that the particles fall within a narrow range of sizes, which is the opposite of "well graded," which refers to media containing a wide range of particle sizes (or "grades").</caption>
+                        <image source="images/Figure-2.1.png" width="100%"/>
+                    </figure>
+
+                    <figure>
+                        <caption>Bulk density as a function of control volume size.  The Representative Elementary Volume (REV) for porosity is attained at the scale identified as v3.  Note that the REV is not unique for any given media, but rather is a function of the parameter which is being characterized.  Thus, since permeability depends on the largest connected apertures, which might be very widely spaced, the REV for permeability might be much larger than that found for porosity.</caption>
+                        <image source="images/0108_v4.png" width="75%"/>
+                    </figure>
+
+                    <p>Although the measured density becomes “better behaved” as the control volume enlarges from the grain scale, there is no scale over which density is entirely constant. As the control volume increases, ever larger structural features of the setting are encompassed with differing properties, and thus the measured bulk density changes. The existence of such multi scale heterogeneity is widely accepted, and Dagan (1986) provides a very nice treatise on the topic. Keep this in mind: the value of all physical parameters in the vadose zone are a function of both position and sample volume.</p>
+
+                    <p>We have two choices then: 1) throw up our arms, and figure that natural systems are hopelessly complex, or, 2) make some reasonable simplifying assumptions. For the sake of progress, we will opt for the latter option (however tempting the former). We will assume that there is some volume, much larger than the grains of the porous medium, yet smaller than the distance between dissimilar regions, which provides a representative sample of our porous medium. This volume is referred to as the Representative Elementary Volume (REV) for the system (Bear, 1972). Each extensive property of the medium is defined at a point by its value calculated taking V to be one REV about that point. We do get around to a more complete analysis of this problem in chapter 6 where we explicitly address scale dependent variability.</p>
+
+                    <p>With that settled, we can proceed to complete our laundry list of definitions of physical properties of porous media (dropping the v subscripts since this is now implicitly understood):</p>
+
+                    <p>Total Bulk Density, and following deleted until table just below.  Instead follow a cross-reference to a single equation, <xref ref="single-equation"/> and another to an equation within a display, <xref ref="was-tagged-e"/>.</p>
+
+                    <table>
+                        <title>Range of values found in bulk density and associated properties illustrated by particular cases. Particle density is taken as 2650 kg m<sup>-3</sup>.</title>
+                        <tabular>
+                            <row>
+                                <cell>Description</cell>
+                                <cell>Bulk Density, r<sub>b</sub> kg m<sup>-3</sup></cell>
+                                <cell>Porosity, n</cell>
+                                <cell>Void Ratio, e</cell>
+                            </row>
+                            <row>
+                                <cell>Surface of wet clay soil</cell>
+                                <cell>1120</cell>
+                                <cell>0.58</cell>
+                                <cell>1.37</cell>
+                            </row>
+                            <row>
+                                <cell>Surface of loam soil</cell>
+                                <cell>1280</cell>
+                                <cell>0.52</cell>
+                                <cell>1.07</cell>
+                            </row>
+                            <row>
+                                <cell>Spheres (uniform size) open packing</cell>
+                                <cell>1390</cell>
+                                <cell>0.48</cell>
+                                <cell>0.91</cell>
+                            </row>
+                            <row>
+                                <cell>Subsoil of sandy texture</cell>
+                                <cell>1610</cell>
+                                <cell>0.39</cell>
+                                <cell>0.65</cell>
+                            </row>
+                            <row>
+                                <cell>Compacted sandy loam soil</cell>
+                                <cell>1900</cell>
+                                <cell>0.28</cell>
+                                <cell>0.39</cell>
+                            </row>
+                            <row>
+                                <cell>Spheres (uniform size) close packing</cell>
+                                <cell>1960</cell>
+                                <cell>0.26</cell>
+                                <cell>0.35</cell>
+                            </row>
+                            <row>
+                                <cell>Sandstone</cell>
+                                <cell>2120</cell>
+                                <cell>0.20</cell>
+                                <cell>0.25</cell>
+                            </row>
+                            <row>
+                                <cell colspan="4">(<em>Source</em>: Marshall and Holmes, 1988; with permission of Cambridge University Press)</cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </subsection> <!-- 2.1.2 -->
+            </section>
+        </chapter>
+
+        <backmatter>
+            <index>
+                <index-list />
+            </index>
+
+            <colophon xml:id="back-colophon">
+                <p>This book was authored in <pretext/>.</p>
+            </colophon>
+        </backmatter>
+
+    </book>
+
+</pretext>
